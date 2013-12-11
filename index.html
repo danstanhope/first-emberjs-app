@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Your First Ember App</title>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http:////netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <script type="text/x-handlebars">
+    {{outlet}}
+  </script>
+
+  <script type="text/x-handlebars" id="index">
+    <h2><i class="fa fa-instagram"></i> Instagram Popular Pics</h2>
+    {{#each item in model}}
+      {{#link-to 'pic' item }}
+        <img class="homepage-images" {{bind-attr src=item.images.thumbnail.url}}/>
+      {{/link-to}}
+    {{/each}}
+  </script>
+
+  <script type="text/x-handlebars" id="pic">
+    <div class="pic-page">
+      <div class="pic-container">
+        <img {{bind-attr src=model.images.standard_resolution.url}}/>
+        <strong class="truncate">{{model.caption.text}}</strong>
+      </div>
+      <h6><i class="fa fa-comments"></i> Comment</h6>
+      <ul>
+      {{#each item in model.comments.data}}
+        <li class="clearfix">
+          <img {{bind-attr src=item.from.profile_picture}}/>
+          <p>{{ item.text }}</p>
+        </li>
+      {{/each}}    
+      </ul>
+    </div>
+  </script>  
+
+  <script src="js/libs/jquery-1.10.2.js"></script>
+  <script src="js/libs/handlebars-1.1.2.js"></script>
+  <script src="js/libs/ember-1.2.0.js"></script>
+  <script src="js/app.js"></script>
+  <!-- to activate the test runner, add the "?test" query string parameter -->
+  <script src="tests/runner.js"></script>
+</body>
+</html>

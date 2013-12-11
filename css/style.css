@@ -1,0 +1,66 @@
+/* Put your CSS here */
+.ember-application {
+    margin: 20px;
+}
+
+img.homepage-images{
+	padding: 5px;
+	border: 1px solid #EEE;
+	box-shadow: 0 0 5px #DDD;
+	margin: 5px;	
+}
+img.homepage-images:hover{
+	box-shadow: 0 0 5px #B6CEFA;
+}
+h2{
+	border-bottom: 2px solid #EEE;
+	padding: 5px;
+	margin: 0 0 15px 0;
+}
+.pic-page{
+	width: 675px;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+.pic-page strong{
+	display: block;
+	font-size: 24px;
+	margin: 10px 0;	
+}
+.pic-page h6{
+	font-size: 20px;
+	margin: 20px 0;
+	border-bottom: 1px solid #EEE;
+	padding: 0 0 10px 0;
+}
+.pic-page ul{
+	list-style: none;
+	padding: 0px;
+}
+.pic-page ul li{
+	margin: 0 0 10px 0;
+}
+.pic-page ul li img{
+	display:block;
+	float:left;
+	width:80px;
+	margin: 0 15px 0 0;
+	border-radius: 1000px;
+}
+.pic-page p{
+	width:580px;
+	float:left;
+	padding: 20px 0 0 0;
+}
+.pic-container img{
+	padding: 15px;
+	border: 1px solid #EEE;
+	box-shadow: 0 0 5px #DDD;	
+}
+
+.truncate {
+  width: 672px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
